@@ -1,0 +1,30 @@
+/* Estilos solo de la página Barbería (acento azul) */
+:root { --acento: #2f8cff; --acento2: #5aa7ff; }
+.reserva { display: grid; grid-template-columns: 1.2fr 1fr; gap: 16px; align-items: start; }
+.panel-caja { background: var(--panel); border: 1px solid var(--borde); padding: 22px; }
+.lista-servicios { display: grid; gap: 8px; margin-top: 12px; }
+.servicio {
+  display: flex; align-items: center; gap: 12px; padding: 12px 14px; cursor: pointer;
+  background: var(--vacio); border: 1px solid var(--borde); transition: border-color .2s, box-shadow .2s;
+}
+.servicio:hover { border-color: var(--acento); }
+.servicio.marcado { border-color: var(--acento); box-shadow: 0 0 14px rgba(47,140,255,.4); }
+.servicio input { width: 18px; height: 18px; accent-color: var(--acento); }
+.servicio .nombre { flex: 1; }
+.servicio small { display: block; color: var(--apagado); }
+.servicio .precio { font-weight: 700; }
+
+form label { display: block; margin: 14px 0 4px; color: var(--apagado); font-size: .95rem; }
+form input, form select {
+  width: 100%; padding: 11px 12px; font: inherit; color: var(--texto);
+  background: var(--vacio); border: 1px solid var(--borde); outline: none; color-scheme: dark;
+}
+form input:focus, form select:focus { border-color: var(--acento); box-shadow: 0 0 12px rgba(47,140,255,.45); }
+.resumen { display: flex; justify-content: space-between; gap: 12px; margin: 20px 0 6px; padding-top: 14px; border-top: 1px solid var(--borde); }
+.error { min-height: 1.5em; color: #ff7ad9; font-size: .95rem; margin-bottom: 8px; }
+#confirmacion .ok {
+  margin-top: 16px; padding: 22px; background: var(--panel);
+  border: 1px solid var(--acento); box-shadow: 0 0 22px rgba(47,140,255,.35);
+}
+#confirmacion .ok ul { margin: 10px 0 0 18px; color: var(--apagado); }
+@media (max-width: 760px) { .reserva { grid-template-columns: 1fr; } }
