@@ -1,0 +1,18 @@
+/* Estilos solo de la página Yoga (acento violeta) */
+:root { --acento: #a24dff; --acento2: #c07dff; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.chips button { font: inherit; background: none; color: var(--apagado); border: 1px solid var(--borde); padding: 6px 16px; cursor: pointer; }
+.chips button.activo { color: #fff; border-color: var(--acento); box-shadow: 0 0 12px rgba(162,77,255,.55); }
+.clases { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.clase { background: var(--panel); border: 1px solid var(--borde); border-left: 4px solid var(--acento); padding: 18px; display: flex; flex-direction: column; gap: 6px; }
+.clase.completa { border-left-color: var(--borde); opacity: .75; }
+.clase .meta { color: var(--apagado); font-size: .95rem; }
+.clase .nivel { align-self: flex-start; font-size: .85rem; padding: 2px 10px; border: 1px solid var(--acento); color: #fff; }
+.clase .cupos { margin: 6px 0 10px; }
+.clase .cupos.poco { color: #ff7ad9; }
+.cuenta { display: inline-grid; place-items: center; min-width: 30px; height: 30px; margin-left: 8px; font-size: 1rem; border: 1px solid var(--acento); box-shadow: 0 0 10px rgba(162,77,255,.5); }
+.reservas { list-style: none; padding: 0; display: grid; gap: 8px; }
+.reservas li { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; background: var(--panel); border: 1px solid var(--borde); }
+.reservas button { background: none; border: 1px solid var(--borde); color: var(--apagado); font: inherit; padding: 4px 12px; cursor: pointer; }
+.reservas button:hover { color: #fff; border-color: #ff7ad9; }
+.vacio { color: var(--apagado); }
